@@ -23,7 +23,7 @@ jobs:
 #         gradle-version: current
 #         arguments: assembleRelease
     - name: Build debug apk with Gradle
-      run: cd project && bash ./gradlew clean assembleRelease
+      run: cd project && bash ./gradlew clean assembleRelease && tree ./app/build/outputs/apk/
     - uses: actions/upload-artifact@v2
       with:
         name: app-debug.apk
