@@ -19,9 +19,9 @@ jobs:
           distribution: temurin
           java-version: 20
     - uses: gradle/gradle-build-action@v2
-      with:
-        gradle-version: current
-        arguments: assembleRelease
+#       with:
+#         gradle-version: current
+#         arguments: assembleRelease
     - name: Build debug apk with Gradle
       run: cd project && bash ./gradlew clean assembleRelease && tree ./app/build/outputs/
     - uses: actions/upload-artifact@v2
