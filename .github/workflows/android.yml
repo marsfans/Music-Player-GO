@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 1.11
     - name: Build debug apk with Gradle
-      run: cd project && bash ./gradlew clean assemble
+      run: cd project && bash ./gradlew clean assembleRelease && tree project/app/build/outputs/apk/
     - uses: actions/upload-artifact@v2
       with:
         name: app-debug.apk
